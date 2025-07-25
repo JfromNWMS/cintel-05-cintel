@@ -121,8 +121,8 @@ with ui.card():
         degrees_freedom = len(df) - 2
         # Residual Standard Error
         rse = sqrt(rss/degrees_freedom)
-        
-        display_text = f'R-sqr: {r_value**2:.5e}<br>RSE: {rse:.5e}<br>{len(df)}'
+
+        display_text = f'R-sqr: {r_value**2:.5e}<br>RSE: {rse:.5e}'
 
         fig.add_scatter(x=df["timestamp"], y=df['best_fit_line'], mode='lines', name='Regression Line', line_color='forestgreen')
         fig.update_layout(xaxis_title="Time",yaxis_title="Temperature (°C)")
